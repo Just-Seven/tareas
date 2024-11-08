@@ -23,6 +23,13 @@
             <ol  class = "lista-tareas">
             </ol>
         </div>
+
+        <div class="tareas-completadas">
+            <h2>Tareas Completadas:</h2>
+            <ol  class = "lista-completadas">
+            </ol>
+        </div>
+
         <script>
              const botonAgregar = document.getElementById("agregado");
       const inputTarea = document.getElementById("input-tarea");
@@ -42,6 +49,33 @@
         }
         listaTareas.appendChild(nuevaTarea);
         inputTarea.value = "";
+
+        const botonCompletar = document.createElement("button");
+                botonCompletar.textContent = "Completar";
+                botonCompletar.classList.add("boton-completar");
+
+                // Evento para marcar la tarea como completada
+                botonCompletar.addEventListener("click", () => {
+                    nuevaTarea.classList.toggle("completada");
+                    if (nuevaTarea.classList.contains("completada")) {
+                        botonCompletar.textContent = " Completada";  // Cambiar el texto del botón
+                    } 
+                    
+                    // Mover la tarea a la lista de completadas
+                    const listaCompletadas = document.querySelector(".lista-completadas");
+                    const tareaCompletada = document.createElement("li");
+                    tareaCompletada.textContent = nuevaTarea.textContent;
+
+                    // Agregar la clase 'completada' para tachar el texto
+                    tareaCompletada.classList.add("completada");
+                    nuevaTarea.remove();
+
+                    // Añadir el nuevo elemento a la lista de tareas completadas
+                    listaCompletadas.appendChild(tareaCompletada);
+                });
+
+                // Agregar el botón de completar a la tarea
+                nuevaTarea.appendChild(botonCompletar);
 
         contador ++;
       });

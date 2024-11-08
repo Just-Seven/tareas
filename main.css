@@ -16,12 +16,12 @@
 }
 
 footer {
-    margin-bottom: auto;
     margin: 20px;
     border: 2px;
     border-radius: 10px;
     background-color: peachpuff;
 }
+
 .boton{
     flex: 1;
     padding: 10px;
@@ -53,8 +53,16 @@ footer {
     border-radius: 10px;
 }
 
+.tareas-completadas{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
 .foot{
-  margin-bottom: auto;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: auto;
 }
 
 .par{
@@ -72,3 +80,27 @@ footer {
 .impar:hover{
     color: black;
 }
+
+.boton-completar {
+    flex: 1;
+    padding: 10px;
+    font-size: 10px;
+    background-color: burlywood;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#tareas li {    
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    overflow-wrap: anywhere;
+}
+
+.completada {
+    color: gray;
+}
+
