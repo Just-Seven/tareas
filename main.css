@@ -1,0 +1,74 @@
+.texto-header {
+    text-align: center;
+    background-color: papayawhip;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px
+
+}
+
+.contenedor-doble {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 15px;
+    background-color: papayawhip;
+}
+
+footer {
+    margin-bottom: auto;
+    margin: 20px;
+    border: 2px;
+    border-radius: 10px;
+    background-color: peachpuff;
+}
+.boton{
+    flex: 1;
+    padding: 10px;
+    font-size: 10px;
+    background-color: burlywood;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.creator{
+    padding: 10px;
+    margin: 20px;
+    border: 2px;
+    border-radius: 5px;
+    background-color: peachpuff;
+}
+
+.contenedor-doble input {
+    flex: 2;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.tareas{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.foot{
+  margin-bottom: auto;
+}
+
+.par{
+    color: blue;
+}
+
+.impar{
+    color: red;
+}
+
+.par:hover{
+    color: black;
+}
+
+.impar:hover{
+    color: black;
+}

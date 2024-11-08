@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <title>Práctica 1</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <header>
+        <h1 class="texto-header"> LISTA DE TAREAS </h1>
+    </header>
+    <body>
+        <div class="contenedor-doble">
+            <input type="text" placeholder="Nueva tarea..." id="input-tarea" >
+            <button id= "agregado" class="boton" type="button">Agregar</button>
+        </div>
+        <div class="tareas">
+            <h2>Tareas:</h2>
+            <ol  class = "lista-tareas">
+            </ol>
+        </div>
+        <script>
+             const botonAgregar = document.getElementById("agregado");
+      const inputTarea = document.getElementById("input-tarea");
+
+      let contador = 1;
+      botonAgregar.addEventListener("click", () => {
+        const tarea = inputTarea.value;
+        const listaTareas = document.querySelector(".lista-tareas");
+        
+        const nuevaTarea = document.createElement("li"); //<li></li>
+        nuevaTarea.textContent = tarea; //<li> valor del input</li>
+
+        if (contador % 2 == 0){
+            nuevaTarea.classList.add("par")
+        }else{
+            nuevaTarea.classList.add("impar")
+        }
+        listaTareas.appendChild(nuevaTarea);
+        inputTarea.value = "";
+
+        contador ++;
+      });
+          </script>
+
+        <div class="foot">
+        <hr>
+        <footer>
+            <p class="creator"> Avril Alexa Caraveo Veleta</p>
+        </footer>
+        </div>
+    </body>
+</html>
